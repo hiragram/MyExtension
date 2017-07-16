@@ -10,6 +10,7 @@
 		601F29351F1B288B004CFA6C /* MyExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601F292B1F1B288A004CFA6C /* MyExtension.framework */; };
 		601F293A1F1B288B004CFA6C /* MyExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F29391F1B288B004CFA6C /* MyExtensionTests.swift */; };
 		601F293C1F1B288B004CFA6C /* MyExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 601F292E1F1B288A004CFA6C /* MyExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		601F29481F1B2B15004CFA6C /* MyExtensionCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F29471F1B2B15004CFA6C /* MyExtensionCompatible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		601F29341F1B288B004CFA6C /* MyExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		601F29391F1B288B004CFA6C /* MyExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExtensionTests.swift; sourceTree = "<group>"; };
 		601F293B1F1B288B004CFA6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		601F29471F1B2B15004CFA6C /* MyExtensionCompatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyExtensionCompatible.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				601F292E1F1B288A004CFA6C /* MyExtension.h */,
 				601F292F1F1B288A004CFA6C /* Info.plist */,
+				601F29471F1B2B15004CFA6C /* MyExtensionCompatible.swift */,
 			);
 			path = MyExtension;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 					601F292A1F1B288A004CFA6C = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = Q3N95Y73WF;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					601F29331F1B288B004CFA6C = {
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				601F29481F1B2B15004CFA6C /* MyExtensionCompatible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +329,7 @@
 		601F29401F1B288B004CFA6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Q3N95Y73WF;
@@ -336,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.yura.MyExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +350,7 @@
 		601F29411F1B288B004CFA6C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Q3N95Y73WF;
@@ -362,6 +370,7 @@
 		601F29431F1B288B004CFA6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = Q3N95Y73WF;
 				INFOPLIST_FILE = MyExtensionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +383,7 @@
 		601F29441F1B288B004CFA6C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = Q3N95Y73WF;
 				INFOPLIST_FILE = MyExtensionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
