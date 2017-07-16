@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIViewController: MyExtensionCompatible {}
+extension UIViewController: MyExtensionCompatible {}
 
 public protocol StoryboardInstantiatable {}
 
