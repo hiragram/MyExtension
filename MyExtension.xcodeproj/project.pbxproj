@@ -12,6 +12,7 @@
 		601F293C1F1B288B004CFA6C /* MyExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 601F292E1F1B288A004CFA6C /* MyExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		601F29481F1B2B15004CFA6C /* MyExtensionCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F29471F1B2B15004CFA6C /* MyExtensionCompatible.swift */; };
 		601F294C1F1B2DD7004CFA6C /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F294B1F1B2DD7004CFA6C /* UITableView.swift */; };
+		60F9245C1F1B7A0900334F43 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F9245B1F1B7A0900334F43 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		601F293B1F1B288B004CFA6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		601F29471F1B2B15004CFA6C /* MyExtensionCompatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyExtensionCompatible.swift; sourceTree = "<group>"; };
 		601F294B1F1B2DD7004CFA6C /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		60F9245B1F1B7A0900334F43 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				601F292F1F1B288A004CFA6C /* Info.plist */,
 				601F29471F1B2B15004CFA6C /* MyExtensionCompatible.swift */,
 				601F294B1F1B2DD7004CFA6C /* UITableView.swift */,
+				60F9245B1F1B7A0900334F43 /* UIViewController.swift */,
 			);
 			path = MyExtension;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			files = (
 				601F29481F1B2B15004CFA6C /* MyExtensionCompatible.swift in Sources */,
 				601F294C1F1B2DD7004CFA6C /* UITableView.swift in Sources */,
+				60F9245C1F1B7A0900334F43 /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +420,7 @@
 				601F29411F1B288B004CFA6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		601F29421F1B288B004CFA6C /* Build configuration list for PBXNativeTarget "MyExtensionTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +429,7 @@
 				601F29441F1B288B004CFA6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

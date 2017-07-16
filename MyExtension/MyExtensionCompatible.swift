@@ -12,6 +12,8 @@ public protocol MyExtensionCompatible {
   associatedtype CompatibleType
 
   var my: CompatibleType { get }
+
+  static var my: CompatibleType.Type { get }
 }
 
 public final class MyExtension<Base> {
@@ -24,5 +26,9 @@ public final class MyExtension<Base> {
 extension MyExtensionCompatible {
   public var my: MyExtension<Self> {
     return .init(base: self)
+  }
+
+  public static var my: MyExtension<Self>.Type {
+    return MyExtension<Self>.self
   }
 }
