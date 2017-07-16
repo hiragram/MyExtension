@@ -11,6 +11,7 @@
 		601F293A1F1B288B004CFA6C /* MyExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F29391F1B288B004CFA6C /* MyExtensionTests.swift */; };
 		601F293C1F1B288B004CFA6C /* MyExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 601F292E1F1B288A004CFA6C /* MyExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		601F29481F1B2B15004CFA6C /* MyExtensionCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F29471F1B2B15004CFA6C /* MyExtensionCompatible.swift */; };
+		601F294C1F1B2DD7004CFA6C /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F294B1F1B2DD7004CFA6C /* UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		601F29391F1B288B004CFA6C /* MyExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExtensionTests.swift; sourceTree = "<group>"; };
 		601F293B1F1B288B004CFA6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		601F29471F1B2B15004CFA6C /* MyExtensionCompatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyExtensionCompatible.swift; sourceTree = "<group>"; };
+		601F294B1F1B2DD7004CFA6C /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				601F292E1F1B288A004CFA6C /* MyExtension.h */,
 				601F292F1F1B288A004CFA6C /* Info.plist */,
 				601F29471F1B2B15004CFA6C /* MyExtensionCompatible.swift */,
+				601F294B1F1B2DD7004CFA6C /* UITableView.swift */,
 			);
 			path = MyExtension;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				601F29481F1B2B15004CFA6C /* MyExtensionCompatible.swift in Sources */,
+				601F294C1F1B2DD7004CFA6C /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
