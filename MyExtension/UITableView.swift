@@ -16,7 +16,7 @@ extension UITableView: MyExtensionCompatible {}
 
 public extension MyExtension where Base: UITableView {
   func registerCell<Cell: UITableViewCell>(type : Cell.Type, xibName: String = cellReuseIdentifier(for: Cell.self)) {
-    base.register(Cell.self, forCellReuseIdentifier: xibName)
+    base.register(UINib.init(nibName: xibName, bundle: nil), forCellReuseIdentifier: xibName)
   }
 
   func dequeueCell<Cell: UITableViewCell>(at indexPath: IndexPath) -> Cell {
