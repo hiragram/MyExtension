@@ -8,11 +8,11 @@
 
 import UIKit
 
-extension UIViewController: MyExtensionCompatible {}
+public extension UIViewController: MyExtensionCompatible {}
 
-protocol StoryboardInstantiatable {}
+public protocol StoryboardInstantiatable {}
 
-extension MyExtension where Base: UIViewController, Base: StoryboardInstantiatable {
+public extension MyExtension where Base: UIViewController, Base: StoryboardInstantiatable {
   static func instantiate() -> Base {
     let storyboardName = String.init(describing: Base.self)
     let storyboard = UIStoryboard.init(name: storyboardName, bundle: nil)
