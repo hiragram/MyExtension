@@ -13,9 +13,11 @@ extension UIViewController: MyExtensionCompatible {}
 public protocol StoryboardInstantiatable {}
 
 public extension MyExtension where Base: UIViewController, Base: StoryboardInstantiatable {
-  static func instantiate() -> Base {
+  static func instantiate(configuration: ((Base) -> Void)? = nil) -> Base {
     let storyboardName = String.init(describing: Base.self)
     let storyboard = UIStoryboard.init(name: storyboardName, bundle: nil)
-    return storyboard.instantiateInitialViewController() as! Base
+    let vc = storyboard.instantiateInitialViewController() as! Base
+    configuration?(vc)
+    return vc
   }
 }
