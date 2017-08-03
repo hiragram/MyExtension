@@ -15,11 +15,11 @@ public protocol StoryboardInstantiatable {
 }
 
 public extension MyExtension where Base: UIViewController, Base: StoryboardInstantiatable {
-  static var storyboardName: String {
+  public static var storyboardName: String {
     return String.init(describing: Base.self)
   }
 
-  static func instantiate(configuration: ((Base) -> Void)? = nil) -> Base {
+  public static func instantiate(configuration: ((Base) -> Void)? = nil) -> Base {
     let storyboard = UIStoryboard.init(name: storyboardName, bundle: nil)
     let vc = storyboard.instantiateInitialViewController() as! Base
     configuration?(vc)
