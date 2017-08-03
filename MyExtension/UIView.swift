@@ -14,13 +14,15 @@ public protocol XibInstantiatable {
   static var xibName: String { get }
 }
 
-public extension MyExtension where Base: UIView, Base: XibInstantiatable {
+public extension XibInstantiatable where Self: UIView {
   static var xibName: String {
-    return String.init(describing: Base.self)
+    return String.init(describing: Self.self)
   }
+}
 
+public extension MyExtension where Base: UIView, Base: XibInstantiatable {
   static func instantiate(configuration: ((Base) -> Void)? = nil) -> Base {
-    let nib = UINib.init(nibName: xibName, bundle: nil)
+    let nib = UINib.init(nibName: Base.xibName, bundle: nil)
     let view = nib.instantiate(withOwner: nil, options: nil).first as! Base
     configuration?(view)
     return view
