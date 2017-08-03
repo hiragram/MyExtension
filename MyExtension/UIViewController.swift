@@ -10,11 +10,16 @@ import UIKit
 
 extension UIViewController: MyExtensionCompatible {}
 
-public protocol StoryboardInstantiatable {}
+public protocol StoryboardInstantiatable {
+  static var storyboardName: String { get }
+}
 
 public extension MyExtension where Base: UIViewController, Base: StoryboardInstantiatable {
+  static var storyboardName: String {
+    return String.init(describing: Base.self)
+  }
+
   static func instantiate(configuration: ((Base) -> Void)? = nil) -> Base {
-    let storyboardName = String.init(describing: Base.self)
     let storyboard = UIStoryboard.init(name: storyboardName, bundle: nil)
     let vc = storyboard.instantiateInitialViewController() as! Base
     configuration?(vc)

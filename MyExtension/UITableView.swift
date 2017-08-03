@@ -12,8 +12,6 @@ private func cellReuseIdentifier(for type: UITableViewCell.Type) -> String {
   return String.init(describing: type)
 }
 
-extension UITableView: MyExtensionCompatible {}
-
 public extension MyExtension where Base: UITableView {
   func registerCell<Cell: UITableViewCell>(type : Cell.Type, xibName: String = cellReuseIdentifier(for: Cell.self)) {
     base.register(UINib.init(nibName: xibName, bundle: nil), forCellReuseIdentifier: xibName)
