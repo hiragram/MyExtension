@@ -17,7 +17,7 @@ public protocol MyExtensionCompatible {
 }
 
 public final class MyExtension<Base> {
-  let base: Base
+  public let base: Base
   public init(base: Base) {
     self.base = base
   }
